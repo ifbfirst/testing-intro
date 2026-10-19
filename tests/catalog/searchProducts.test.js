@@ -27,6 +27,6 @@ describe('searchProducts', () => {
     expect(searchProducts(products,'    ').map((p)=>p.id)).toEqual([1, 2, 3, 4, 5, 6])
   });
   test("'\\t\\n' возвращает товары с ID [1, 2, 3, 4, 5, 6]", ()=>{
-    expect(searchProducts(products,'\\t\\n').map((p)=>p.id)).toEqual([1, 2, 3, 4, 5, 6])
+    expect(searchProducts(products,'\t\n').map((p)=>p.id)).toEqual([1, 2, 3, 4, 5, 6])
   });
 });
